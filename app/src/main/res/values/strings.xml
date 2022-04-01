@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Quran</string>
+    <string name="al_quran">Al-Quran</string>
+    <string name="list_surah">Daftar Surah</string>
+    <string name="last_read">Terakhir Dibaca</string>
+    <string name="search">Search</string>
 </resources>

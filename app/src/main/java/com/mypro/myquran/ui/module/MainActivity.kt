@@ -1,7 +1,8 @@
-package com.mypro.myquran
+package com.mypro.myquran.ui.module
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.mypro.myquran.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

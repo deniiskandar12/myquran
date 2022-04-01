@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="surah"
+            type="com.mypro.myquran.data.database.surah.Surah" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="16dp">
+
+        <TextView
+            android:id="@+id/tv_no"
+            style="@style/TextView.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_bg_number"
+            android:gravity="center"
+            android:text="@{String.valueOf(surah.id)}"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/TextView.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-3dp"
+            android:gravity="center"
+            android:text="@{surah.name}"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/tv_no"
+            app:layout_constraintTop_toTopOf="@id/tv_no"
+            tools:text="Al-Fatihah" />
+
+
+        <TextView
+            android:id="@+id/tv_translation"
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@{surah.translation}"
+            android:textColor="@color/grey_56"
+            app:layout_constraintStart_toEndOf="@id/tv_no"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            tools:text="Al-Fatihah" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
