@@ -18,8 +18,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:importantForAccessibility="no"
             android:background="@drawable/bg_top"
+            android:importantForAccessibility="no"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -34,19 +34,6 @@
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/btn_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/search"
-            android:layout_marginEnd="28dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
-            android:src="@drawable/ic_search"
-            app:layout_constraintBottom_toBottomOf="@id/tv_al_quran"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tv_al_quran" />
 
         <View
             android:id="@+id/v_white_bg"
@@ -66,7 +53,7 @@
             app:layout_constraintTop_toTopOf="@id/v_white_bg" />
 
         <TextView
-            android:id="@+id/tv_terakhir_dibaca_label"
+            android:id="@+id/tv_last_read_label"
             style="@style/TextView.Medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,27 +65,27 @@
             app:layout_constraintTop_toTopOf="@id/v_blue_bg" />
 
         <ImageView
-            android:id="@+id/img_terakhir_dibaca"
+            android:id="@+id/img_last_read"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:importantForAccessibility="no"
             android:layout_marginTop="6dp"
+            android:importantForAccessibility="no"
             android:src="@drawable/ic_last_read"
             app:layout_constraintStart_toStartOf="@id/v_blue_bg"
-            app:layout_constraintTop_toBottomOf="@id/tv_terakhir_dibaca_label" />
+            app:layout_constraintTop_toBottomOf="@id/tv_last_read_label" />
 
         <TextView
-            android:id="@+id/tv_terakhir_dibaca"
+            android:id="@+id/tv_last_read"
             style="@style/TextView.Bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="17dp"
             android:textColor="@color/white"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@id/img_terakhir_dibaca"
-            app:layout_constraintStart_toEndOf="@id/img_terakhir_dibaca"
-            app:layout_constraintTop_toTopOf="@id/img_terakhir_dibaca"
+            app:layout_constraintBottom_toBottomOf="@id/img_last_read"
+            app:layout_constraintStart_toEndOf="@id/img_last_read"
+            app:layout_constraintTop_toTopOf="@id/img_last_read"
             tools:text="Al-Fatihah : 1" />
 
         <TextView
@@ -117,26 +104,27 @@
             android:id="@+id/rv_surah"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:status="@{viewModel.status}"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_daftar_surah"
-            app:listData="@{viewModel.surahs}" />
+            app:listData="@{viewModel.surahs}"
+            app:showData="@{viewModel.showData}"
+            app:status="@{viewModel.status}" />
 
         <include
             android:id="@+id/shimmer"
             layout="@layout/layout_shimmer"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginHorizontal="15dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_daftar_surah"
-            android:layout_marginTop="32dp"
-            app:status="@{viewModel.status}"
+            android:layout_marginTop="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_daftar_surah"
+            app:status="@{viewModel.status}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

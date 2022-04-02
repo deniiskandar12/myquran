@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/drawable-v24/bg_blue_stroke_purple.xml" value="0.1325" />
+        <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/drawable-v24/ic_bottom_sheet_line.xml" value="0.14" />
+        <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/drawable-v24/ic_info.xml" value="0.1325" />
         <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/drawable/bg_blue_rounded.xml" value="0.1325" />
         <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/drawable/bg_white_rounded_top.xml" value="0.1325" />
         <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/drawable/ic_bg_number.xml" value="0.1325" />
@@ -10,9 +13,12 @@
         <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/drawable/ic_terakhir_dibaca.xml" value="0.1325" />
         <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/font/font.xml" value="0.24537037037037038" />
         <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/layout/activity_main.xml" value="0.20277777777777778" />
-        <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/layout/fragment_surah.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/layout/fragment_detail_surah.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/layout/fragment_surah.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/layout/item_shimmer.xml" value="0.20277777777777778" />
+        <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/layout/layout_description.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/layout/layout_shimmer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/layout/row_detail_surah.xml" value="0.2" />
         <entry key="..\:/Users/Deni/AndroidStudioProjects/MyQuran/app/src/main/res/layout/row_surah.xml" value="0.2" />
       </map>
     </option>

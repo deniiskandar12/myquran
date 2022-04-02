@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_white_rounded_top"
+        android:paddingBottom="32dp"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="72dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="5dp"
+            android:background="@drawable/ic_bottom_sheet_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_description_label"
+            style="@style/TextView"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="14sp"
+            android:layout_marginTop="22dp"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            android:text="@string/description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/TextView"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="24dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_description_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Tempor, elementum risus ut tempus semper. Morbi quam malesuada hendrerit porttitor. Tellus tempor, tortor nunc dolor enim, in bibendum arcu id. Pharetra venenatis commodo quis ipsum eu luctus. Eget rhoncus dui neque in a aliquet pretium. Nisl id purus lectus tempor. Egestas vel a, tristique aliquam ut risus quam pellentesque. Vel gravida diam, at elit elit enim. Hendrerit lacinia etiam donec ornare purus lacus, eget. Sapien duis tempus viverra volutpat ultrices urna. Neque amet, elementum, blandit metus, amet purus tempus. Et vel tellus dignissim neque. Odio sem fames duis pharetra. Netus integer amet turpis pretium tristique. Integer pharetra nunc arcu posuere ac."
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

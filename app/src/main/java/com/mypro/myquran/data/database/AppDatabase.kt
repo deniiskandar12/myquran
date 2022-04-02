@@ -4,17 +4,19 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.mypro.myquran.data.database.detail_surah.DetailSurah
+import com.mypro.myquran.data.database.detail_surah.DetailSurahDao
 import com.mypro.myquran.data.database.surah.Surah
 import com.mypro.myquran.data.database.surah.SurahDao
 
-@Database(entities = [Surah::class], version = 1)
+@Database(entities = [Surah::class, DetailSurah::class], version = 1)
 abstract class AppDatabase: RoomDatabase() {
     abstract fun surahDao(): SurahDao
+    abstract fun detailSurahDao(): DetailSurahDao
 
     companion object {
         @Volatile
         private var INSTANCE: AppDatabase? = null
-
 
         fun getDatabase(context: Context): AppDatabase {
             return INSTANCE ?: synchronized(this) {

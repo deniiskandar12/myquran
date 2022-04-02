@@ -7,5 +7,17 @@
     <fragment
         android:id="@+id/surahFragment"
         android:name="com.mypro.myquran.ui.module.surah.SurahFragment"
-        android:label="SurahFragment" />
+        android:label="SurahFragment" >
+        <action
+            android:id="@+id/action_surahFragment_to_detailSurahFragment"
+            app:destination="@id/detailSurahFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailSurahFragment"
+        android:name="com.mypro.myquran.ui.module.detail_surah.DetailSurahFragment"
+        android:label="DetailSurahFragment" >
+        <argument
+            android:name="surah"
+            app:argType="com.mypro.myquran.data.database.surah.Surah" />
+    </fragment>
 </navigation>

@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -70,4 +71,7 @@ dependencies {
 
     //Shimmer
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    //DataStore
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
 }

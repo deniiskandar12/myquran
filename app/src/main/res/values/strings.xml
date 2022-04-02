@@ -3,5 +3,7 @@
     <string name="al_quran">Al-Quran</string>
     <string name="list_surah">Daftar Surah</string>
     <string name="last_read">Terakhir Dibaca</string>
-    <string name="search">Search</string>
+    <string name="info">Info</string>
+    <string name="back">Back</string>
+    <string name="description">Keterangan</string>
 </resources>

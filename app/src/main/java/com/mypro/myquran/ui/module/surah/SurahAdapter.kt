@@ -20,11 +20,15 @@ class SurahAdapter() : ListAdapter<Surah, SurahAdapter.ViewHolder>(DiffCallback)
         }
     }
 
-    var onClick: ((Int, Surah) -> Unit)? = null
+    var onClick: ((Surah) -> Unit)? = null
 
-    class ViewHolder(private val binding: RowSurahBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(surah : Surah){
+    inner class ViewHolder(private val binding: RowSurahBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(surah: Surah) {
             binding.surah = surah
+            binding.root.setOnClickListener {
+                onClick?.invoke(surah)
+            }
         }
     }
 
@@ -32,7 +36,7 @@ class SurahAdapter() : ListAdapter<Surah, SurahAdapter.ViewHolder>(DiffCallback)
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
-        val binding = RowSurahBinding.inflate(LayoutInflater.from(parent.context))
+        val binding = RowSurahBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 

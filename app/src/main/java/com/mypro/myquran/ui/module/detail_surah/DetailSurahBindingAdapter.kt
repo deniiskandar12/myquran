@@ -1,19 +1,21 @@
-package com.mypro.myquran.ui.module.surah
+package com.mypro.myquran.ui.module.detail_surah
 
 import android.view.View
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.facebook.shimmer.ShimmerFrameLayout
+import com.mypro.myquran.data.database.detail_surah.DetailSurah
 import com.mypro.myquran.data.database.surah.Surah
 import com.mypro.myquran.data.network.ApiStatus
+import com.mypro.myquran.ui.module.surah.SurahAdapter
 
 @BindingAdapter("listData", "showData")
 fun bindRecyclerView(
     recyclerView: RecyclerView,
-    data: List<Surah>?,
+    data: List<DetailSurah>?,
     showData: () -> Unit
 ) {
-    val adapter = recyclerView.adapter as SurahAdapter
+    val adapter = recyclerView.adapter as DetailSurahAdapter
     adapter.submitList(data)
     if (data?.isNotEmpty() == true) {
         showData()

@@ -65,6 +65,31 @@
                 android:layout_marginTop="12dp"
                 app:layout_constraintTop_toBottomOf="@id/v_5" />
 
+
+            <include
+                android:id="@+id/v_7"
+                layout="@layout/item_shimmer"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/v_6" />
+
+            <include
+                android:id="@+id/v_8"
+                layout="@layout/item_shimmer"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/v_7" />
+
+            <include
+                android:id="@+id/v_9"
+                layout="@layout/item_shimmer"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/v_8" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

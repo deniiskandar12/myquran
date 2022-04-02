@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="detailSurah"
+            type="com.mypro.myquran.data.database.detail_surah.DetailSurah" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:paddingHorizontal="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_number"
+            style="@style/TextView.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_bg_number"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:text="@{String.valueOf(detailSurah.id)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tv_ayat"
+            style="@style/TextView.Medium"
+            android:layout_width="match_parent"
+            android:text="@{detailSurah.ayat}"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_blue_stroke_purple"
+            android:gravity="start"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="20dp"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_number"
+            tools:text="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ" />
+
+        <TextView
+            android:id="@+id/tv_translation"
+            style="@style/TextView.Medium"
+            android:layout_width="wrap_content"
+            android:text="@{detailSurah.translation}"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_ayat"
+            tools:text="Dengan menyebut nama allah yang maha pemurah lagi maha penyayang" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

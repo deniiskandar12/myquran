@@ -1,5 +1,6 @@
 package com.mypro.myquran.data.network
 
+import com.mypro.myquran.data.database.detail_surah.DetailSurah
 import com.mypro.myquran.data.database.surah.Surah
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -8,6 +9,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 private const val BASE_URL =
     "https://api.npoint.io/99c279bb173a6e28359c/"
@@ -15,6 +17,11 @@ private const val BASE_URL =
 interface ApiService {
     @GET("data")
     suspend fun getSurahs(): List<Surah>
+
+    @GET("surat/{nomor}")
+    suspend fun getDetailSurahs(
+        @Path("nomor") number : Int
+    ): List<DetailSurah>
 }
 
 object Api {
